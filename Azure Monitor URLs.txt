@@ -1,0 +1,3 @@
+https://aka.ms/AzMonDiagSettingsDoc
+
+http://aka/ms/MonitoringDocs

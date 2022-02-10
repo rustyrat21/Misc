@@ -1,0 +1,46 @@
+powercfg /sleepstudy
+
+Sleep Study report saved to file path C:\WINDOWS\system32\sleepstudy-report.html.
+It shows in this folder, C:\WINDOWS\system32\, becuase that is where the commands were run
+
+
+You are searching for event ID 42 in System log from source Kernel-Power as the sleeping event
+
+and the event ID 1 in System log from source Power-Troubleshooter for computer's awakening, which are respectively the last and first logs entries upon sleeping/waking up
+
+and the event ID 1 in System log from source Power-Troubleshooter for computer's awakening, which are respectively the last and first logs entries upon sleeping/waking up
+
+Logging power events is easy with Event viewer.. 
+
+here are the steps...
+
+Open Event viewer and right click on Custom View and click on 'create custom view 
+Under the Filter Tab ; check "By Source" and from the Event sources dropdown select Kernel-Power, Power-Troubleshooter. Also check all the Event Levels.
+Just above the Task Category you have space to enter the Event ID.. This is important as you dont need all the information except for entering sleep and resuming from sleep. Just enter 42,1
+Leave the rest and click ok
+Give a name for this Log ... and you are good to go.
+
+
+FYI, to run this remotely, you can use psexec from the pstools suite - I keep psexec in c:\tools
+
+c:\tools\psexec \\remote-pc powercfg -lastwake
+
+ 
+
+or, if specific domain privs are needed:
+
+c:\tools\psexec \\remote-pc -u your-domain\priv-account -p priv-passwd powercfg -lastwake
+
+"These events already are logged in the event log" (that answers part of the asker's question immediately) and then, "They are Event 1 and Event 42 (wake and sleep, respectively).
+
+To query for these events, you can use a number of built-in or third-party tools, including Event Viewer itself, with its "Filter" option. Example: [If you have Windows 7]
+
+Click Start, type "eventvwr.msc" and press enter - that will open event log viewer.
+
+Expand "Windows Logs," then click on the 'System' event log.
+
+Right-click, and then choose "Filter Current Log"
+
+In the <All Event IDs> input window (just above Task category), type "1,42"
+
+In the "Event sources" window, click the drop-down and put a check-mark beside "Kernel-Power" and "Power-Troubleshooter" and then click "OK." This will give you a nice listing of wake & sleep events and, on Event 1 (wake), in the "General" tab, at the very bottom, the wake source will be shown; if not known, it will display "Wake Source: Unknown"  - for more detail, you may need to parse events just prior to the "wake Event," in order to determine the true wake source, which may be a system mainteanance task."

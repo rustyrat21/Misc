@@ -1,0 +1,13 @@
+Added Registry Kep Update{8A69D345-D564-463C-AFF1-A69D9E530F96} with Value 3 to Audit workstation
+
+Path HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Update
+
+Value meaning:
+
+0 - This setting corresponds to the Updates disabled policy setting. This means updates are completely disabled for Chrome.
+
+1 - This setting corresponds to the Always allow updates policy setting. This means that updates are always installed regardless of whether they were found via periodic silent updates or a manual update check.
+
+2 - This setting corresponds to the Manual updates only policy setting. This means updates are only applied when a user performs a manual check.
+
+3 - This setting corresponds to the Automatic silent updates only policy setting. This means updates are only installed when they are found via the periodic silent update check.
