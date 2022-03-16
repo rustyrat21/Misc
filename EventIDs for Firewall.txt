@@ -1,0 +1,15 @@
+Event ID 5031 – The Windows Firewall Service Blocked An Application From Accepting Incoming Connections On The Network
+Event ID	5031
+Category	Object Access: Filtering Platform Connection
+Type	Failure Audit
+When the Windows Filtering Platform blocks an application from accepting any incoming connections on the network, event ID 5031 is logged. This is the default setting, unless firewall rules have been set up for specific applications in Windows Firewall.
+
+This event log contains the following information:
+
+Profiles
+Applications
+Why does event ID 5031 need to be monitored?
+To detect those applications which do not have Windows Firewall rules
+To monitor the activities of a particular application (trackable via "Application Name")
+To check if certain applications are restricted
+

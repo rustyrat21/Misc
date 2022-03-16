@@ -2,6 +2,8 @@ Added Registry Kep Update{8A69D345-D564-463C-AFF1-A69D9E530F96} with Value 3 to 
 
 Path HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Update
 
+Name - UpdateDefault
+
 Value meaning:
 
 0 - This setting corresponds to the Updates disabled policy setting. This means updates are completely disabled for Chrome.
