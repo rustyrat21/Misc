@@ -5,7 +5,6 @@ $1903 = "Win10_1903_updates.csv"
 $1909 = "Win10_1909_updates.csv"
 $2004 = "Win10_2004_updates.csv"
 $2009 = "Win10_2009_updates.csv"
-$20H1 = "Win10_20H1_updates.csv"
 $20H2 = "Win10_20H2_updates.csv"
 $21H1 = "Win10_21H1_updates.csv"
 $21H2 = "Win10_21H2_updates.csv"
@@ -36,10 +35,6 @@ Get-MSCatalogUpdate -Search "Security Update for Windows 10 (2004)" | Export-csv
 Get-MSCatalogUpdate -Search "Cumulative Update for Windows 10 Version 2009" | Export-csv -path "$location\$2009" -NoTypeInformation -Append
 
 Get-MSCatalogUpdate -Search "Security Update for Windows 10 (2009)" | Export-csv -path "$location\$2009" -NoTypeInformation -Append
-
-Get-MSCatalogUpdate -Search "Cumulative Update for Windows 10 Version 20H1" | Export-csv -path "$location\$20H1" -NoTypeInformation -Append
-
-Get-MSCatalogUpdate -Search "Security Update for Windows 10 (20H1)" | Export-csv -path "$location\$20H1" -NoTypeInformation -Append
 
 Get-MSCatalogUpdate -Search "Cumulative Update for Windows 10 Version 20H2" | Export-csv -path "$location\$20H2" -NoTypeInformation -Append
 
