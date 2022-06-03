@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/2309227/sqlite-select-with-condition-on-date
+

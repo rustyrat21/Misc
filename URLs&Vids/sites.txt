@@ -1,0 +1,11 @@
+ImportExcel
+
+https://dfinke.github.io/powershell/2019/07/31/Creating-beautiful-Powershell-Reports-in-Excel.html
+
+HMDI info
+
+https://www.census.gov/library/reference/code-lists/ansi.html#par_statelist
+
+PowerBi
+
+https://docs.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-filled-maps-choropleths
